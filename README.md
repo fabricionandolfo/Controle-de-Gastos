@@ -59,3 +59,23 @@ npm run dev
 O projeto foi desenvolvido seguindo boas práticas de organização em camadas, separando lógica de negócio, acesso a dados e controllers.
 
 Se quiser, eu também posso te mandar uma versão ainda melhor para recrutador, que fala das regras de negócio (menor não pode receita) em 2 linhas só, que deixa o README bem mais profissional sem ficar grande.
+
+
+
+OBSERVAÇÃO IMPORTANTE
+
+O frontend se comunica com o backend através da API.
+Caso a porta da API seja diferente ao executar o projeto, será necessário ajustar a URL utilizada no frontend.
+
+Por padrão o projeto utiliza:
+
+API
+https://localhost:7039
+
+Se a aplicação iniciar em outra porta, basta alterar o endereço configurado no arquivo de conexão da API no frontend.
+
+Exemplo de configuração:
+
+src/api/api.ts
+
+baseURL: "https://localhost:7039/api"
