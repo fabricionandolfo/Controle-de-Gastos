@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fabri\\source\\repos\\TesteTecnico\\TesteTecnico.API\\TesteTecnico.API.csproj": {}
+    "C:\\Users\\fabri\\source\\repos\\Gestao de gastos\\TesteTecnico.API\\TesteTecnico.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fabri\\source\\repos\\TesteTecnico\\TesteTecnico.API\\TesteTecnico.API.csproj": {
+    "C:\\Users\\fabri\\source\\repos\\Gestao de gastos\\TesteTecnico.API\\TesteTecnico.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\TesteTecnico\\TesteTecnico.API\\TesteTecnico.API.csproj",
+        "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\Gestao de gastos\\TesteTecnico.API\\TesteTecnico.API.csproj",
         "projectName": "TesteTecnico.API",
-        "projectPath": "C:\\Users\\fabri\\source\\repos\\TesteTecnico\\TesteTecnico.API\\TesteTecnico.API.csproj",
+        "projectPath": "C:\\Users\\fabri\\source\\repos\\Gestao de gastos\\TesteTecnico.API\\TesteTecnico.API.csproj",
         "packagesPath": "C:\\Users\\fabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fabri\\source\\repos\\TesteTecnico\\TesteTecnico.API\\obj\\",
+        "outputPath": "C:\\Users\\fabri\\source\\repos\\Gestao de gastos\\TesteTecnico.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

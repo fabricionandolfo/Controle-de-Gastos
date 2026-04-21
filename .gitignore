@@ -1,0 +1,19 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## Build
+bin/
+obj/
+
+## Rider / VS Code opcional
+.idea/
+.vscode/
+
+## Logs
+*.log
+
+## Arquivos temporários
+*.tmp
+*.cache

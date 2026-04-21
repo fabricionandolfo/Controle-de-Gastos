@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using TesteTecnico.API.Data;
-using TesteTecnico.API.Repositories.Interfaces;
 using TesteTecnico.API.Repositories;
+using TesteTecnico.API.Repositories.Interfaces;
 using TesteTecnico.API.Services;
 using TesteTecnico.API.Services.Interfaces;
 
@@ -15,7 +16,13 @@ builder.Services.AddControllers()
 	});
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c => 
+	c.SwaggerDoc("v1", new OpenApiInfo
+	{
+		Title = "GestaoDeGastos.API",
+		Version = "v1"
+	})
+);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseSqlite("Data Source=controle_gasto.db"));

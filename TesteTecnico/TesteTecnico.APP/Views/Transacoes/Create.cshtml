@@ -1,0 +1,56 @@
+﻿@model TesteTecnico.APP.Models.TransacaoViewModel
+
+@{
+    ViewData["Title"] = "Nova Transação";
+}
+
+<h1 class="mb-3">Nova Transação</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Descricao" class="form-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label asp-for="Valor" class="form-label"></label>
+                    <input asp-for="Valor" class="form-control" />
+                    <span asp-validation-for="Valor" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="Tipo" class="form-label"></label>
+                    <select asp-for="Tipo" asp-items="ViewBag.Tipos" class="form-select"></select>
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label asp-for="PessoaId" class="form-label">Pessoa</label>
+                    <select asp-for="PessoaId" asp-items="ViewBag.Pessoas" class="form-select"></select>
+                    <span asp-validation-for="PessoaId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CategoriaId" class="form-label">Categoria</label>
+                <select asp-for="CategoriaId" asp-items="ViewBag.Categorias" class="form-select"></select>
+                <span asp-validation-for="CategoriaId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

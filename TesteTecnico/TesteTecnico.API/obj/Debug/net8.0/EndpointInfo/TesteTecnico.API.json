@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "TesteTecnico.API",
-    "version": "1.0"
+    "title": "GestaoDeGastos.API",
+    "version": "v1"
   },
   "paths": {
     "/api/Categorias": {

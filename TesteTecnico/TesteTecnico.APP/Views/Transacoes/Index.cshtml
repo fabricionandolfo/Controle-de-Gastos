@@ -1,0 +1,42 @@
+﻿@model List<TesteTecnico.APP.Models.TransacaoViewModel>
+
+@{
+    ViewData["Title"] = "Transações";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="mb-0">Transações</h1>
+    <a asp-action="Create" class="btn btn-primary">Nova Transação</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body table-responsive">
+        <table class="table table-striped align-middle mb-0">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Pessoa</th>
+                    <th>Categoria</th>
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Descricao</td>
+                        <td>@(item.Pessoa?.Nome ?? "-")</td>
+                        <td>@(item.Categoria?.Descricao ?? "-")</td>
+                        <td>@item.Tipo</td>
+                        <td class="@(item.Tipo == TesteTecnico.APP.Models.TipoTransacaoViewModel.Receita ? "text-success" : "text-danger")">
+                            @item.Valor.ToString("C")
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@model TesteTecnico.APP.Models.RelatorioPessoasResponseViewModel
+
+@{
+    ViewData["Title"] = "Relatórios";
+}
+
+<h1 class="mb-4">Relatório por Pessoa</h1>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card border-success shadow-sm">
+            <div class="card-body">
+                <h6>Total Receitas</h6>
+                <h4 class="text-success">@Model.TotalGeral.TotalReceitas.ToString("C")</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-danger shadow-sm">
+            <div class="card-body">
+                <h6>Total Despesas</h6>
+                <h4 class="text-danger">@Model.TotalGeral.TotalDespesas.ToString("C")</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-primary shadow-sm">
+            <div class="card-body">
+                <h6>Saldo</h6>
+                <h4 class="text-primary">@Model.TotalGeral.SaldoLiquido.ToString("C")</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Pessoa</th>
+                    <th>Receitas</th>
+                    <th>Despesas</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Pessoas)
+                {
+                    <tr>
+                        <td>@item.NomePessoa</td>
+                        <td class="text-success">@item.TotalReceitas.ToString("C")</td>
+                        <td class="text-danger">@item.TotalDespesas.ToString("C")</td>
+                        <td>@item.Saldo.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
