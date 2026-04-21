@@ -1,81 +1,84 @@
-Controle de Gastos
+# 💰 Sistema de Controle de Gastos Pessoais
 
-Projeto desenvolvido para controle de receitas e despesas por pessoa.
+Aplicação completa para gerenciamento de receitas e despesas por pessoa, com dashboard financeiro e relatórios consolidados.
 
-A aplicação permite cadastrar pessoas, categorias e transações, além de visualizar um relatório consolidado com total de receitas, despesas e saldo por pessoa.
+---
 
-O backend foi desenvolvido com ASP.NET Core Web API utilizando arquitetura em camadas (Controllers, Services e Repositories) para separar responsabilidades e manter o código organizado.
+## 📌 Funcionalidades
 
-O banco utilizado é SQLite, acessado através do Entity Framework Core.
+- Cadastro de **Pessoas**
+- Cadastro de **Categorias** (Receita, Despesa ou Ambas)
+- Cadastro de **Transações**
+- Dashboard com:
+  - Total de receitas
+  - Total de despesas
+  - Saldo geral
+- Relatório consolidado por pessoa
 
-Seed de Dados
+---
 
-O projeto possui uma seed automática que cria alguns dados iniciais para facilitar os testes.
+## 🧠 Regras de Negócio
 
-Ao iniciar a aplicação o sistema cria automaticamente:
+- Pessoas menores de idade não podem receber **receitas**
+- Transações devem possuir:
+  - Pessoa válida
+  - Categoria válida
+  - Valor maior que zero
 
-Pessoas
+---
 
-Categorias
+## 🏗️ Arquitetura
 
-Algumas transações de exemplo
+O backend foi desenvolvido utilizando **arquitetura em camadas**:
 
-Isso permite já abrir o sistema e visualizar o relatório funcionando sem precisar cadastrar tudo manualmente.
+- Controllers → entrada da API
+- Services → regras de negócio
+- Repositories → acesso a dados
 
-Tecnologias
+Essa separação facilita manutenção, testes e evolução do sistema.
 
-Backend
+---
 
- -.NET 8
+## 🗄️ Banco de Dados
 
- -ASP.NET Core Web API
+- SQLite
+- Acesso via Entity Framework Core
 
- -Entity Framework Core
+---
 
- -SQLite
+## 🌱 Seed de Dados
 
- -Swagger
+Ao iniciar a aplicação, o sistema cria automaticamente:
 
-Frontend
+- Pessoas
+- Categorias
+- Transações de exemplo
 
- -React
+Isso permite testar o sistema imediatamente sem cadastro manual.
 
- -TypeScript
+---
 
- -Vite
+## ⚙️ Tecnologias
 
- -Axios
+### 🔹 Backend
 
- -React Router
+- .NET 8
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQLite
+- Swagger
 
-Como executar
-Backend
+### 🔹 Frontend (MVC)
+
+- ASP.NET Core MVC
+- Razor Pages
+- Bootstrap
+
+---
+
+## ▶️ Como executar
+
+### Backend
+
+```bash
 dotnet run
-Frontend
-npm install
-npm run dev
- Observação
-
-O projeto foi desenvolvido seguindo boas práticas de organização em camadas, separando lógica de negócio, acesso a dados e controllers.
-
-Se quiser, eu também posso te mandar uma versão ainda melhor para recrutador, que fala das regras de negócio (menor não pode receita) em 2 linhas só, que deixa o README bem mais profissional sem ficar grande.
-
-
-
-OBSERVAÇÃO IMPORTANTE
-
-O frontend se comunica com o backend através da API.
-Caso a porta da API seja diferente ao executar o projeto, será necessário ajustar a URL utilizada no frontend.
-
-Por padrão o projeto utiliza:
-
-API
-https://localhost:7039
-
-Se a aplicação iniciar em outra porta, basta alterar o endereço configurado no arquivo de conexão da API no frontend.
-
-Exemplo de configuração:
-
-src/api/api.ts
-
-baseURL: "https://localhost:7039/api"
