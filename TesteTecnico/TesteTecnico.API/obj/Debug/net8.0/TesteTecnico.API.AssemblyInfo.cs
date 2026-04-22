@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TesteTecnico.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aad3f4090dee7b871453fe577a67bcfddc23c7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d723910eb4723242c125dc751133069b5f83c81e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TesteTecnico.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TesteTecnico.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
